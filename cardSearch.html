@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Search</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <link rel="Stylesheet" href="styles.css">
+    <script src="findCards.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" class="nav">
+            <h3>MTG Collection Manager</h3>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="cardSearch.html">Card Search <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="collectionManager.html">Collection Manager</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <br>
+        <H1>Search:</H1>
+        <div class="row">
+            <div class="col">
+                <label for="nameField">Name:</label>
+                <input class="form-control" type="text" name="nameField" id="nameField">
+            </div>
+            <div class="col">
+                <label for="costField">Cost:</label>
+                <input class="form-control" type="text" name="costField" id="costField">
+            </div>
+        </div>
+        <br>
+        <h3>Colors:</h3>
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col">
+
+                <div class="form-check">
+
+                    <label class="form-check-label" for="andRad"><input class="form-check-input" type="radio" name="Rad"
+                            id="andRad" value="AND" checked> AND</label>
+                </div>
+                <div class="form-check">
+
+                    <label class="form-check-label" for="orRad"><input class="form-check-input" type="radio" name="Rad"
+                            id="orRad" value="OR"> OR</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-check">
+
+                    <label class="form-check-label" for="wBox"><input class="form-check-input" type="checkbox"
+                            name="wBox" id="wBox"> White</label>
+                </div>
+                <div class="form-check">
+
+                    <label class="form-check-label" for="uBox"><input class="form-check-input" type="checkbox"
+                            name="uBox" id="uBox"> Blue</label>
+                </div>
+                <div class="form-check">
+
+                    <label class="form-check-label" for="bBox"><input class="form-check-input" type="checkbox"
+                            name="bBox" id="bBox"> Black</label>
+                </div>
+                <div class="form-check">
+
+                    <label class="form-check-label" for="rBox"><input class="form-check-input" type="checkbox"
+                            name="rBox" id="rBox"> Red</label>
+                </div>
+                <div class="form-check">
+
+                    <label class="form-check-label" for="gBox"><input class="form-check-input" type="checkbox"
+                            name="gBox" id="gBox"> Green</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="typeField">Type:</label>
+                <input class="form-control" type="text" name="typeField" id="typeField">
+
+                <label for="subtypeField">Subtype:</label>
+                <input class="form-control" type="text" name="subtypeField" id="subtypeField">
+
+                <label for="abilitiesField">Abilities:</label>
+                <input class="form-control" type="text" name="abilitiesField" id="abilitiesField">
+                <br>
+                <input class="btn btn-primary" type="button" value="submit" id="searchButton">
+
+            </div>
+            <div class="col">
+                <label for="powField">Power:</label>
+                <input class="form-control" type="text" name="powField" id="powField">
+
+                <label for="touField">Toughness:</label>
+                <input class="form-control" type="text" name="touField" id="touField">
+            </div>
+        </div>
+        <br>
+        <div class="row" id="display"></div>
+</body>
+
+</html>

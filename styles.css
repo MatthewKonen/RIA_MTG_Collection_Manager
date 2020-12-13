@@ -1,0 +1,29 @@
+@charset "utf-8";
+html{
+    font-size: calc(1% + .1vh + .1vw + 20px);
+}
+h3{
+    color: white;
+}
+
+@media screen and (min-width: 769px) {
+    html{
+        font-size: 16px;
+    }
+    header * {
+        font-size: 22px;
+    }
+}
+  
+@media screen and (max-width: 768px) {
+    html{
+        font-size: calc(10% + 1vh + 1vw);
+    }
+    header * {
+        font-size: calc(20% + 1vh + 1vw); 
+    }
+}
+.nav{
+    width:100%;
+    margin: 0;
+}
